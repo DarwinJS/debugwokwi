@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "author": "Uri Shaked",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico", "top": 0, "left": 0, "attrs": { "builder": "pico-sdk"} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -32.38,
+      "left": -70.31,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.1", "led1:C", "black", [ "h0" ] ],
+    [ "led1:A", "pico:TP5", "green", [ "v0" ] ]
+  ]
+}

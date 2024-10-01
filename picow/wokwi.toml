@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "picow_blink.uf2"
+elf = "picow_blink.elf"
